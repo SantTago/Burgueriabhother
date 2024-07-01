@@ -1154,7 +1154,7 @@ strong {
   left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(150,38,38,0.8);
+  background: rgba(68, 68, 68, 0.8);
   -webkit-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -2196,7 +2196,7 @@ input:checked + [class^='popup-'] .content {
   #topo .toggle-menu:hover button,
   #topo .toggle-menu:hover button:before,
   #topo .toggle-menu:hover button:after {
-    background: #962626;
+    background: rgba(68, 68, 68, 0.8);
   }
   #topo .top-nav {
     position: fixed;
