@@ -615,6 +615,149 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 			</div>
 		-->
+
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15938.874104847444!2d-40.8411589!3d-2.8972346!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ebdb0069217d71%3A0x85a39ac6ce4a499d!2sBrother%20Hamburgueria%20Artesanal!5e0!3m2!1spt-BR!2sbr!4v1720060351759!5m2!1spt-BR!2sbr" width="100%" height="300px" style="border:0; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<!--------------------------------------------------------------->
+	  
+		<style>
+		  .social-icons-container1 {
+		   background-color: hsl(0, 0%, 44%);
+		 color: white;
+		 padding: 7px;
+		 text-align: center;
+		 display: flex;
+		 justify-content: center;
+		 width: 100%;
+		 box-sizing: border-box;
+		 flex-wrap: nowrap;
+		}
+	  
+		.social-icons-container2 {
+		 background-color: hsl(0, 0%, 44%);
+		 color: white;
+		 padding: 10px;
+		 text-align: center;
+		 display: flex;
+		 justify-content: center;
+		 width: 100%;
+		 box-sizing: border-box;
+		 flex-wrap: nowrap;
+		 
+		}
+		#saiba {
+		   text-decoration: none;
+		 }
+	  
+		 #saiba h2 {
+		   font-size: 16px;
+		   display: inline-block;
+		   color: #000;
+		   padding: 10px 20px;
+		   border-radius: 25px;
+		   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+		 }
+	  
+		 #saiba h2:hover {
+		   background-color: #3498db; /* Amarelo mais escuro no hover */
+		   color: white;
+		 }
+		 hr {
+		  /* margin-top: 20px; */
+		  margin-bottom: -21px;
+		  border: 0;
+		  border-top: 1px solid #eee;
+	  }
+	  
+	   </style>
+	  
+	   <div class="social-icons-container1">
+		 <h2></h2>
+	   </div>
+	  
+	   <section class="slider">
+		 
+		 <div class="product">
+		   <img src="res/1.jpg" alt="bebe">
+		 </div>
+	  
+		 <div class="product">
+		   <img src="res/9.jpg" alt="bebe">
+		 </div>
+	  
+		 <div class="product">
+		   <img src="res/2.jpg" alt="bebe">
+		 </div>
+	  
+		 <div class="product">
+		   <img src="res/3.jpg" alt="bebe">  
+		 </div>
+	  
+		 <div class="product">
+		   <img src="res/4.jpg" alt="bebe"> 
+		 </div>
+	  
+		 <div class="product">
+		   <img src="res/5.jpg" alt="bebe"> 
+		 </div>
+	  
+		 <div class="product">
+		   <img src="res/6.jpg" alt="bebe"> 
+		 </div>
+	  
+		 <div class="product">
+		   <img src="res/7.jpg" alt="bebe"> 
+		 </div>
+	  
+		 <div class="product">
+		   <img src="res/8.jpg" alt="bebe"> 
+		 </div>
+	  
+		
+	   </section>
+	  
+	   <div class="social-icons-container2">
+		 <a id="saiba" href="serviços.html"><h2></h2></a>
+	   </div>
+	  
+	   <!-- Adicione este script após a tag <body> -->
+	  <script>
+	   $(document).ready(function(){
+		 const slider = $('.slider');
+	  
+		 slider.slick({
+			 slidesToShow: 4,
+			 slidesToScroll: 1,
+			 prevArrow: '<button class="slick-prev">Anterior</button>',
+			 nextArrow: '<button class="slick-next">Próximo</button>',
+			 autoplay: true, // Ativar o autoplay
+			 autoplaySpeed: 2000, // Intervalo de tempo em milissegundos (2 segundos)
+	  
+			 responsive: [
+				 {
+					 breakpoint: 600,
+					 settings: {
+						 slidesToShow: 1
+					 }
+				 }
+			 ]
+		 });
+	  
+		 // Parar o autoplay ao clicar em uma imagem
+		 slider.on('click', '.slick-slide', function() {
+			 slider.slick('slickPause'); // Parar o carrossel
+			 setTimeout(function() {
+				 slider.slick('slickPlay'); // Retomar o carrossel após 5 segundos
+			 }, 5000); // Tempo em milissegundos (5 segundos)
+		 });
+	  });
+	  
+	  </script>
+	  <hr class="linha-horizontal">
+	  
+	  
+	   <!--------------------------------------------------->
+
+
 		<footer id="rodape" class="branco">
 			<div class="container p80">
 				<div class="row text-center-sm">
@@ -660,6 +803,92 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<span>Burgueriabhother 2024 - Todos os direitos reservados por Tiago viana da cruz | <a href="http://www.agenciaprospecta.com.br/" title="Marketing Digital" target="_blank">Agência: Registra Camocim</a></span>
 			</div>
 		</footer>
+		
+
+	<script type="text/javascript" src="js/jquery.parallax.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Loader
+
+			$(window).on('load', function(){
+				setTimeout(function(){
+					  $('html').addClass('loaded');
+				}, 500);
+			});
+
+			setTimeout(function(){
+				shave('#cardapio .item p', 70, {character: '...'});
+			}, 1000);
+
+			$(window).scroll(function() {
+				var winOffset = $(this).scrollTop() + $(this).height() * .75;
+				$('.titulo-principal.detalhe, #unidades').each(function(index, el) {
+					var titleOffset = $(el).offset().top;
+					if(winOffset > titleOffset)
+						$(el).addClass('ativo');
+				});
+			});
+
+			$('#cardapio').parallax({
+				relativeInput: false,
+				clipRelativeInput: false,
+				invertX: true,
+				invertY: true,
+				limitX: 0,
+				scalarX: 10,
+				originX: -0.2,
+				originY: -0.2,
+				frictionY: .2
+			});
+
+			$('.slick-banner').slick({
+				dots: false,
+				arrows: true,
+				infinite: true,
+				loop: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				swipeToSlide: true,
+				fade: true,
+				speed: 1000,
+				autoplay: true,
+				autoplaySpeed: 5000,
+				pauseOnHover: false
+			});
+		});
+	</script>
+
+		<a href="https://wa.me/5588982228232" class="whatsapp-button" target="_blank">
+			<img src="res/zap.png" alt="WhatsApp">
+		</a>
+	<style>
+		/* Estilo do botão flutuante do WhatsApp */
+		/* Estilo do botão flutuante do WhatsApp */
+		.whatsapp-button {
+			position: fixed;
+			width: 60px;
+			height: 60px;
+			bottom: 40px;
+			right: 40px;
+			text-align: center;
+			font-size: 30px;
+			z-index: 1000;
+		}
+
+		.whatsapp-button img {
+			width: 80%;
+			height: 80%;
+			border-radius: 50%;
+			margin-left: 27px;
+		}
+
+		/* Adicione uma pequena animação para o botão */
+		.whatsapp-button:hover {
+			transform: scale(1.1);
+			transition: transform 0.3s;
+		}
+
+	</style>
 		
 			
 
