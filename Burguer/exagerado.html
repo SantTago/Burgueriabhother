@@ -170,11 +170,111 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		</section>
 
+		<audio id="background-music" autoplay muted>
+			<source src="../musicas/Cazuza - Exagerado (Video Oficial) (256).mp3" type="audio/mpeg">
+			Seu navegador não suporta a tag de áudio.
+		</audio>
+		
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				var audio = document.getElementById('background-music');
+				audio.play().then(function() {
+					// Autoplay iniciado com sucesso
+					audio.muted = false;  // Remover o mudo após o início do autoplay
+				}).catch(function(error) {
+					// Falha no autoplay devido a políticas do navegador
+					console.log('Autoplay bloqueado:', error);
+				});
+			});
+		</script>
+
+
 		<main id="cardapio">
 			<section class="container">
 				<div class="row branco">
-					<div class="col-md-6 col-md-push-6 interna-texto">
 
+
+				<!--------------------------------------------------->
+				<link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+				<script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
+
+			
+				<audio id="myAudio" controls>
+
+					<source src="../musicas/Cazuza - Exagerado (Video Oficial) (256).mp3" type="audio/mp3">
+					Seu navegador não suporta o elemento de áudio.
+				  </audio>
+				  
+				  <style>
+				  /* Estilo personalizado para os controles de áudio */
+				  .plyr--audio {
+					margin-bottom: 30px;
+					margin-top: -50px;
+				  }
+				  .plyr--audio .plyr__controls {
+					background-color: #333; /* Fundo cinza escuro */
+					color: #ccc; /* Texto cinza claro */
+				  }
+				  
+				  .plyr--audio .plyr__control {
+					color: #ccc; /* Ícones e texto cinza claro */
+				  }
+				  
+				  .plyr--audio .plyr__progress--played,
+				  .plyr--audio .plyr__volume--display {
+					background-color: #ccc; /* Barra de progresso e controle de volume cinza claro */
+				  }
+				  
+				  .plyr--audio .plyr__progress--buffer {
+					background-color: #666; /* Barra de progresso de buffer cinza mais escuro */
+				  }
+				  
+				  .plyr--audio .plyr__progress--background {
+					background-color: #222; /* Fundo da barra de progresso cinza escuro */
+				  }
+				  
+				  .plyr--audio .plyr__time {
+					color: #ccc; /* Tempo de reprodução e duração em cinza claro */
+				  }
+				  </style>
+				  
+				  <script>
+				  document.addEventListener('DOMContentLoaded', () => {
+					const player = new Plyr('#myAudio', {
+					  controls: ['play', 'progress', 'current-time', 'mute', 'volume'],
+					  seekTime: 10,
+					  volume: 1,
+					  muted: false,
+					  autoplay: true,
+					  hideControls: false,
+					  showPosterOnEnd: true,
+					  disableContextMenu: false,
+					  displayDuration: true,
+					  iconPrefix: 'plyr',
+					  debug: false,
+					  tooltips: {
+						controls: true,
+						seek: true
+					  },
+					  keyboard: {
+						focused: true,
+						global: false
+					  },
+					  storage: {
+						enabled: true,
+						key: 'plyr',
+						type: 'local'
+					  }
+					});
+				  
+					// Expose
+					window.player = player;
+				  });
+				  </script>
+				  
+				<!--------------------------------------------------->
+					
+					<div class="col-md-6 col-md-push-6 interna-texto">
 						<h3 class="titulo-principal"><small>Burgers</small>exagerado (cazuza - 1985)</h3>
 
 							<p style="font-size: 20px;">ingredientes</p>
@@ -201,7 +301,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="col-md-6 col-md-pull-6 rel">
 		                		                <div class="slick-1item">
 							 								 <div>
-    <a href="../Burguer/Sohoje.jpg" class="fancybox" rel="gallery">
+    <a href="../Burguer/mulher-de-fases.jpg" class="fancybox" rel="gallery">
         <img src="../Burguer/exagerado.jpg" alt="Tuba" title="Tuba">
     </a>
 </div>
@@ -257,8 +357,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="col-md-3 col-sm-4">
 						<h3 class="iron fz24 uppercase mb30">institucional</h3>
 						<ul>
-							<li class="mb10"><a href="quem-somos.html" title="Quem Somos">Quem Somos</a></li>
-							<li class="mb10"><a href="index.html" title="Cardápio">Cardápio</a></li>
+							<li class="mb10"><a href="../quem-somos.html" title="Quem Somos">Quem Somos</a></li>
+							<li class="mb10"><a href="../index.html" title="Cardápio">Cardápio</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-4">
